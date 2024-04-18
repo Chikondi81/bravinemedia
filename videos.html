@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> bravine media </title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+<style>
+    body {
+        font-weight: normal;
+        background-color: rgb(0, 0, 0);
+        width: 1535px;
+        margin-top: 125px;
+        /* Adjusted to make space for the fixed navigation */
+        position: relative;
+        /* Added position relative */
+    }
+    
+    * {
+        margin: 10px;
+        padding: 10px;
+        box-sizing: initial;
+        font-family: sans-serif;
+    }
+    
+    nav {
+        width: 1355px;
+        height: 75px;
+        background-color: #00093f;
+        color: whitesmoke;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 250px;
+        position: fixed;
+        top: 50px;
+        left: 5px;
+        right: 50px;
+        border-style: solid;
+        border-radius: 60px;
+        border-width: 2px;
+        border-color: #ffffff;
+        z-index: 1000;
+        /* Ensure the navigation bar is above other elements */
+    }
+    
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+        font-style: inherit;
+        font-family: DejaVu Serif, serif;
+        border-width: 1px;
+        padding-right: 50px;
+        ;
+    }
+    
+    .Menu {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    
+    .Menu li {
+        margin-right: 95px;
+    }
+    
+    .Menu li a {
+        font-size: 15px;
+        color: whitesmoke;
+        text-decoration: wavy;
+        transition: 0.5s ease;
+        border-width: 1px;
+        border-style: wave;
+        border-radius: 10px;
+        padding: 4px;
+        background-color: #00093f;
+        font-family: sans-serif;
+    }
+    
+    .Menu li a:hover {
+        background-color: #bebebe;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .logo img {
+        width: 120px;
+        /* Adjust the width as needed */
+        height: auto;
+    }
+    
+    * {
+        box-sizing: border-box;
+        border-style: wave;
+        border-radius: 20px;
+        padding: 4px;
+    }
+    
+    .services {
+        color: white;
+        padding: 20px;
+        width: 50%;
+        height: 500px;
+        /* Adjust the height to match the navigation bar */
+        position: page;
+        top: -75px;
+        /* Adjusted to match the height of the navigation bar */
+        left: 0%;
+        z-index: 999;
+        /* Ensure it's below the navigation bar */
+        margin-top: 60px;
+        /* Adjusted to match the height of the navigation bar */
+        color: whitesmoke;
+        font-weight: bolder;
+        font-size: 100%;
+    }
+    
+    .services:hover {
+        color: rgb(160, 160, 165);
+    }
+    
+    .services ul {
+        list-style-type: circle;
+        margin-left: 100px;
+    }
+    
+    .services ul li {
+        font-family: sans-serif;
+        font-size: 100%;
+        margin-top: 10px;
+    }
+    
+    .empty-cover {
+        width: 100%;
+        height: 190px;
+        /* Adjust the height to match the navigation bar */
+        background-color: rgb(0, 0, 0);
+        /* Adjust the background color as needed */
+        position: fixed;
+        top: -75px;
+        /* Adjusted to match the height of the navigation bar */
+        left: 0;
+        z-index: 999;
+        /* Ensure it's below the navigation bar */
+        margin-top: 75px;
+        /* Adjusted to match the height of the navigation bar */
+        border-bottom-style: solid;
+        border-radius: 0px;
+        border-color: #f1f3ff;
+        border-width: 1.5px;
+        padding: 4px;
+    }
+    
+    .active {
+        background-color: #000000;
+        /* Change the background color */
+        color: whitesmoke;
+        /* Change the text color */
+        font-size: 15px;
+    }
+    
+    .active:hover {
+        zoom: 130%;
+        background-color: #020f3a;
+    }
+    
+    .menu {
+        width: 1355px;
+        height: 75px;
+        background-color: transparent;
+        display: inline-flex;
+        justify-content: right;
+        align-items: center;
+        padding: 50px;
+        position: fixed;
+        top: -22px;
+        left: 15px;
+        right: 50px;
+        z-index: 1000;
+        /* Ensure the navigation bar is above other elements */
+        font-style: italic;
+        font-family: sans-serif;
+    }
+    
+    p {
+        color: #9c600b;
+        font-size: 25px;
+        position: absolute;
+        /* Change to absolute positioning */
+        top: 25%;
+        /* Adjust top position */
+        left: 50%;
+        /* Adjust left position */
+        transform: translate(30%, -50%);
+        /* Center horizontally and vertically */
+        z-index: 1000;
+        /* Ensure the <p> element is above other elements */
+        font-style: italic;
+        font-family: Arial Black;
+    }
+    
+    p1 {
+        color: #ffffff;
+        font-size: 15px;
+        position: absolute;
+        /* Change to absolute positioning */
+        top: 40%;
+        /* Adjust top position */
+        left: 53%;
+        /* Adjust left position */
+        transform: translate(30%, -50%);
+        /* Center horizontally and vertically */
+        z-index: 1000;
+        /* Ensure the <p> element is above other elements */
+        font-style: italic;
+        font-family: Arial Black;
+    }
+</style>
+
+
+<body>
+
+    <p> TRUST BRAVINE MEDIA WITH <br> QUALITY DESIGNS </p>
+
+    <p1> CLICK HERE TO MAKE AN ORDER </p1>
+
+
+    <div class="empty-cover">
+        <!-- Upper menu -->
+        <ul class="menu">
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100089871093990&mibextid=ZbWKwL" class="active">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:Bravinemedia@gmail.com" class="active">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <!-- Change href to open WhatsApp -->
+                <a href="whatsapp://send?phone=+260760700765" class="active">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <img src="BRAVINE MEDIA LOGO BLACK.png" alt="BRAVINE MEDIA LOGO"> </div>
+        <ul class="Menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="Photos.html"><i class="fa-regular fa-image"></i>Photos </a></li>
+            <li><a href="videos.html"><i class="fa-solid fa-video"></i>Videos</a></li>
+            <li><a href="About.html"><i class="fa-solid fa-address-card"></i> About </a></li>
+        </ul>
+    </nav>
+
+
+    <div class="services">
+        <h2>OUR SERVICES</h2>
+        <ul>
+            <li>SOCIAL MEDIA MANAGEMENT</li>
+            <li>WEB DEVELOPMENT</li>
+            <li>GRAPHIC DESIGN</li>
+            <li>IVE STREAMING</li>
+            <li>PHOTOGRAPHY</li>
+            <li>VIDEOGRAPHY</li>
+            <li>LOGO DESIGN</li>
+            <li>VOICE OVERS</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

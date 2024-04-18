@@ -1,0 +1,466 @@
+b
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> bravine media</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<style>
+    body {
+        background-color: rgb(185, 185, 251);
+    }
+    
+    .sidebar {
+        color: white;
+        font-weight: normal;
+        background-color: rgb(0, 0, 0);
+        width: 200px;
+        height: 700px;
+        margin-top: -10px;
+        margin-left: -7px;
+        /* Adjusted to make space for the fixed navigation */
+        position: relative;
+        /* Added position relative */
+        z-index: 999;
+        position: fixed;
+    }
+    
+    .user-img {
+        margin-left: 25px;
+        width: 140px;
+        border-radius: 150%;
+        border: 1px solid white;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .top {
+        color: white;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    
+    .user {
+        padding-top: 10px;
+        padding-left: 1px;
+    }
+    
+    .user p {
+        padding-top: 10px;
+        padding-left: 60px;
+    }
+    
+    .user ul li {
+        background-color: transparent;
+        border-radius: 2%;
+        border-right: 20%;
+        margin-right: 30%;
+        margin-left: 0%;
+    }
+    
+    .user ul li:hover {
+        background-color: grey;
+        zoom: 110%;
+    }
+    
+    .menu {
+        width: 1px;
+        padding-top: 10px;
+        padding-left: 1px;
+    }
+    
+    ul li a {
+        color: rgb(255, 255, 255);
+        width: 1px;
+        justify-content: space-between;
+    }
+    
+    .empty-cover {
+        width: 10%;
+        height: 150px;
+        /* Adjust the height to match the navigation bar */
+        background-color: rgb(255, 255, 255);
+        /* Adjust the background color as needed */
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        /* Adjusted to match the height of the navigation bar */
+        z-index: 0;
+        /* Ensure it's below the navigation bar */
+        margin-top: -200px;
+        /* Adjusted to match the height of the navigation bar */
+        border-bottom-style: solid;
+        border-radius: 0px;
+        border-color: #f1f3ff;
+        border-width: 1.5px;
+        padding-left: 75.5%;
+        padding-right: 0%;
+    }
+    
+    .empty-cover P {
+        height: 150px;
+        color: black;
+        font-size: 40px;
+        margin-left: -700px;
+        font-style: bolder;
+        margin-top: -30px;
+        font-weight: bolder;
+    }
+    
+    .empty-cover h1 {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        margin-left: -70px;
+        margin-top: 30px;
+    }
+    
+    .active {
+        background-color: transparent;
+        /* Change the background color */
+        color: rgb(0, 0, 0);
+        /* Change the text color */
+        font-size: 15px;
+    }
+    
+    .active:hover {
+        zoom: 150%;
+    }
+    
+    .links {
+        width: 110px;
+        height: 7px;
+        background-color: transparent;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        position: absolute;
+        top: 58px;
+        left: 1170px;
+        right: 50px;
+        z-index: 1000;
+        /* Ensure the navigation bar is above other elements */
+        font-style: italic;
+        font-family: sans-serif;
+    }
+    
+    .container {
+        width: 10%;
+        height: 480px;
+        /* Adjust the height to match the navigation bar */
+        background-color: transparent;
+        /* Adjust the background color as needed */
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        /* Adjusted to match the height of the navigation bar */
+        z-index: 0;
+        /* Ensure it's below the navigation bar */
+        margin-top: -45px;
+        /* Adjusted to match the height of the navigation bar */
+        border-bottom-style: solid;
+        border-radius: 0px;
+        border-color: #f1f3ff;
+        border-width: 1.5px;
+        padding-left: 75.5%;
+        padding-right: 0%;
+    }
+    
+    .services ul {
+        top: 110px;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        margin-left: -370px;
+        position: absolute;
+        font-style: italic;
+        justify-content: space-evenly;
+    }
+    
+    .container p {
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        margin-left: -330px;
+        position: absolute;
+        top: 10px;
+        left: px;
+        font-weight: bolder;
+    }
+    
+    .picture {
+        max-height: 10px;
+        max-width: 10px;
+        position: absolute;
+        top: 35px;
+        left: 40px;
+        padding: 0px;
+        border-width: 8px;
+        border-color: black;
+    }
+    
+    button {
+        font-size: 18px;
+        position: absolute;
+        color: white;
+        background-color: rgb(105, 75, 30);
+        font-weight: bolder;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #ffcc5f;
+        border-radius: 10px;
+        top: 500px;
+        left: 32px;
+    }
+    
+    button:hover {
+        background-color: rgb(182, 138, 50);
+    }
+    /*--bottom details*/
+    
+    .details-cover {
+        width: 10%;
+        height: 150px;
+        /* Adjust the height to match the navigation bar */
+        background-color: rgb(22, 22, 22);
+        /* Adjust the background color as needed */
+        position: absolute;
+        bottom: -500px;
+        left: 200px;
+        /* Adjusted to match the height of the navigation bar */
+        z-index: 0;
+        /* Ensure it's below the navigation bar */
+        margin-top: -200px;
+        /* Adjusted to match the height of the navigation bar */
+        border-bottom-style: solid;
+        border-radius: 0px;
+        border-color: #f1f3ff;
+        border-width: 1.5px;
+        padding-left: 75.5%;
+        padding-right: 0%;
+    }
+    
+    .details-cover ul h1 {
+        color: white;
+        padding-left: 230%;
+        padding-right: 0%;
+        left: -2200;
+        position: absolute;
+    }
+    
+    .details-cover ul h11 {
+        color: white;
+        padding-left: 230%;
+        padding-right: 0%;
+        left: -2200;
+        position: absolute;
+        bottom: 47px;
+    }
+    
+    .details-cover ul h2 {
+        color: white;
+        padding-left: 200%;
+        padding-right: 0%;
+        left: -2200;
+        position: absolute;
+    }
+    
+    .details-cover ul h22 {
+        color: white;
+        padding-left: 200%;
+        padding-right: 0%;
+        left: -2200;
+        position: absolute;
+        bottom: 50px;
+    }
+    
+    .details-cover ul h3 {
+        color: white;
+        padding-left: 265%;
+        padding-right: 0%;
+        left: -2200;
+        position: absolute;
+    }
+    
+    .details-cover ul h33 {
+        color: white;
+        padding-left: 265%;
+        padding-right: 0%;
+        left: -2200;
+        position: absolute;
+        bottom: 50px;
+    }
+    
+    .bottom-links {
+        color: rgb(255, 255, 255);
+        width: 110px;
+        height: px;
+        background-color: transparent;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: px;
+        position: absolute;
+        top: 108px;
+        left: px;
+        right: 30px;
+        z-index: 1000;
+        /* Ensure the navigation bar is above other elements */
+        font-style: italic;
+        font-family: sans-serif;
+    }
+    
+    .middle-cover {
+        width: 10%;
+        height: 330px;
+        /* Adjust the height to match the navigation bar */
+        background-color: rgb(185, 185, 251);
+        /* Adjust the background color as needed */
+        position: absolute;
+        bottom: -350px;
+        left: 200px;
+        /* Adjusted to match the height of the navigation bar */
+        z-index: 0;
+        /* Ensure it's below the navigation bar */
+        margin-top: -200px;
+        /* Adjusted to match the height of the navigation bar */
+        border-bottom-style: solid;
+        border-radius: 0px;
+        border-width: 1.5px;
+        padding-left: 75.5%;
+        padding-right: 0%;
+    }
+    
+    .middle-cover ul h1 {
+        color: black;
+        font-size: 15;
+        padding-right: 10px;
+    }
+</style>
+
+<body>
+
+
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>BRAVIN MEDIA</span>
+            </div>
+            <div class="menu">
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+        </div>
+        <div class="user">
+            <img src="BRAVINE MEDIA LOGO 1.png" alt="brave" class="user-img">
+            <div><br>
+                <p>M E N U</p><br>
+                <button type="button"><href="#"></href> ORDER NOW</button>
+            </div>
+            <ul>
+                <li>
+                    <a href=" # ">
+                        <i class="fa-solid fa-house "></i>
+                        <span class="nav-item ">H O M E</span></a>
+
+                </li><br>
+
+                <li>
+                    <a href="Photos.html">
+                        <i class="fa-regular fa-image "></i>
+                        <span class="nav-item ">P H O T OS</span></a>
+
+                </li><br>
+
+                <li>
+                    <a href="# ">
+                        <i class="fa-solid fa-video "></i>
+                        <span class="nav-item ">V I D E O S</span></a>
+
+                </li><br>
+
+                <li>
+                    <a href="# ">
+                        <i class="fa-solid fa-address-card "></i>
+                        <span class="nav-item ">A B O U T</span></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="empty-cover ">
+        <h1>CREATE MEMORIES WITH US
+        </h1>
+        <p> BRAVINE MEDIA</p>
+
+    </div>
+
+    <!-- bottom details -->
+    <div class="details-cover ">
+        <ul>
+            <h1> Contact </h1>
+            <h11> +260 97 3300417</h11>
+            <h2> Email</h2>
+            <h22> Bravinemedia@gmail.com </h22>
+            <h3> WhatsApp</h3>
+            <h33>+260 760700765
+            </h33>
+        </ul>
+        <ul class="bottom-links ">
+
+            <a href="https://www.facebook.com/profile.php?id=100089871093990&mibextid=ZbWKwL " class="active ">
+                <i class="fa-brands fa-facebook "></i>
+            </a>
+
+
+            <a href="mailto:Bravinemedia@gmail.com " class="active ">
+                <i class="fa-solid fa-envelope "></i>
+            </a>
+
+            <!-- Change href to open WhatsApp -->
+            <a href="whatsapp://send?phone=+260760700765 " class="active ">
+                <i class="fa-brands fa-square-whatsapp "></i>
+            </a>
+            </li>
+        </ul>
+    </div>
+    <!-- middle cover -->
+    <div class="middle-cover ">
+        <ul>
+            <h1></h1>
+        </ul>
+        <div class="picture "> <img src=".jpeg"></div>
+    </div>
+    <div class="container ">
+
+        <p>OUR SERVICES</p>
+        <ul class="services ">
+
+            <ul>
+                <li>SOCIAL MEDIA MANAGEMENT</li><br>
+                <li>WEB DEVELOPMENT</li><br>
+                <li>GRAPHIC DESIGN</li><br>
+                <li>LIVE STREAMING</li><br>
+                <li>PHOTOGRAPHY</li><br>
+                <li>VIDEOGRAPHY</li><br>
+                <li>LOGO DESIGN</li><br>
+                <li>VOICE OVERS</li><br>
+            </ul>
+            <div class="picture "> <img src="photo.jpg "></div>
+    </div>
+
+
+</body>
+
+</html>
