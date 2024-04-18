@@ -1,367 +1,301 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <title> bravine media </title>
+    <title> bravine media</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <style>
     body {
+        background-color: rgb(185, 185, 251);
+    }
+    
+    .sidebar {
+        color: white;
         font-weight: normal;
         background-color: rgb(0, 0, 0);
-        width: 1535px;
-        margin-top: 125px;
+        width: 200px;
+        height: 700px;
+        margin-top: -10px;
+        margin-left: -7px;
         /* Adjusted to make space for the fixed navigation */
         position: relative;
         /* Added position relative */
-    }
-    
-    * {
-        margin: 10px;
-        padding: 10px;
-        box-sizing: initial;
-        font-family: sans-serif;
-    }
-    
-    nav {
-        width: 1355px;
-        height: 75px;
-        background-color: #00093f;
-        color: whitesmoke;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 50px;
-        padding-right: 250px;
-        position: fixed;
-        top: 50px;
-        left: 5px;
-        right: 50px;
-        border-style: solid;
-        border-radius: 60px;
-        border-width: 2px;
-        border-color: #ffffff;
-        z-index: 1000;
-        /* Ensure the navigation bar is above other elements */
-    }
-    
-    .logo {
-        font-size: 20px;
-        font-weight: bold;
-        font-style: inherit;
-        font-family: DejaVu Serif, serif;
-        border-width: 1px;
-        padding-right: 50px;
-        ;
-    }
-    
-    .Menu {
-        width: 70%;
-        display: flex;
-        justify-content: center;
-        list-style: none;
-    }
-    
-    .Menu li {
-        margin-right: 95px;
-    }
-    
-    .Menu li a {
-        font-size: 15px;
-        color: whitesmoke;
-        text-decoration: wavy;
-        transition: 0.5s ease;
-        border-width: 1px;
-        border-style: wave;
-        border-radius: 10px;
-        padding: 4px;
-        background-color: #00093f;
-        font-family: sans-serif;
-    }
-    
-    .Menu li a:hover {
-        background-color: #bebebe;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .logo img {
-        width: 120px;
-        /* Adjust the width as needed */
-        height: auto;
-    }
-    
-    * {
-        box-sizing: border-box;
-        border-style: wave;
-        border-radius: 20px;
-        padding: 4px;
-    }
-    
-    .services {
-        color: white;
-        padding: 20px;
-        width: 50%;
-        height: 500px;
-        /* Adjust the height to match the navigation bar */
-        position: page;
-        top: -75px;
-        /* Adjusted to match the height of the navigation bar */
-        left: 0%;
         z-index: 999;
-        /* Ensure it's below the navigation bar */
-        margin-top: 60px;
-        /* Adjusted to match the height of the navigation bar */
-        color: whitesmoke;
-        font-weight: bolder;
-        font-size: 100%;
-        background-image: <img src="lens2.jpeg"/>;
+        position: fixed;
     }
     
-    .services ul {
-        list-style-type: circle;
-        margin-left: 100px;
+    .user-img {
+        margin-left: 25px;
+        width: 140px;
+        border-radius: 150%;
+        border: 1px solid white;
     }
     
-    .services ul li {
-        font-family: sans-serif;
-        font-size: 100%;
-        margin-top: 10px;
+    .top {
+        color: rgb(255, 255, 255);
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    
+    .user {
+        padding-top: 10px;
+        padding-left: 1px;
+    }
+    
+    .user ul li {
+        background-color: transparent;
+        border-radius: 2%;
+        border-right: 20%;
+        margin-right: 30%;
+        margin-left: 0%;
+    }
+    
+    .user ul li:hover {
+        background-color: grey;
+        zoom: 110%;
+    }
+    
+    .menu {
+        width: 1px;
+        padding-top: 10px;
+        padding-left: 1px;
+    }
+    
+    ul li a {
+        color: rgb(255, 255, 255);
+        width: 1px;
+        justify-content: space-between;
     }
     
     .empty-cover {
-        width: 100%;
-        height: 190px;
+        width: 10%;
+        height: 150px;
         /* Adjust the height to match the navigation bar */
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
         /* Adjust the background color as needed */
-        position: fixed;
-        top: -75px;
+        position: absolute;
+        top: 200px;
+        left: 200px;
         /* Adjusted to match the height of the navigation bar */
-        left: 0;
-        z-index: 999;
+        z-index: 0;
         /* Ensure it's below the navigation bar */
-        margin-top: 75px;
+        margin-top: -200px;
         /* Adjusted to match the height of the navigation bar */
         border-bottom-style: solid;
         border-radius: 0px;
         border-color: #f1f3ff;
         border-width: 1.5px;
-        padding: 4px;
+        padding-left: 75.5%;
+        padding-right: 0%;
     }
-    /*facebook, email,whatsapp links*/
+    
+    .empty-cover P {
+        height: 150px;
+        color: black;
+        font-size: 40px;
+        margin-left: -700px;
+        font-style: bolder;
+        margin-top: -30px;
+        font-weight: bolder;
+    }
+    
+    .empty-cover h1 {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        margin-left: -70px;
+        margin-top: 30px;
+    }
     
     .active {
-        background-color: #000000;
+        background-color: transparent;
         /* Change the background color */
-        color: whitesmoke;
+        color: rgb(0, 0, 0);
         /* Change the text color */
         font-size: 15px;
     }
     
     .active:hover {
-        zoom: 130%;
-        background-color: #020f3a;
+        zoom: 150%;
     }
-    /*facebook, email,whatsapp links*/
     
-    .menu {
-        color: white;
-        width: 1355px;
-        height: 75px;
+    .links {
+        width: 110px;
+        height: 7px;
         background-color: transparent;
         display: inline-flex;
-        justify-content: right;
+        justify-content: space-between;
         align-items: center;
         padding: 50px;
-        position: fixed;
-        top: -22px;
-        left: 15px;
+        position: absolute;
+        top: 58px;
+        left: 1170px;
         right: 50px;
         z-index: 1000;
         /* Ensure the navigation bar is above other elements */
         font-style: italic;
         font-family: sans-serif;
     }
-    /*second menu*/
     
-    .second-menu {
-        color: white;
-        width: 100%;
-        height: 190px;
+    .container {
+        width: 10%;
+        height: 480px;
         /* Adjust the height to match the navigation bar */
         background-color: transparent;
         /* Adjust the background color as needed */
-        position: fixed;
-        top: -75px;
+        position: absolute;
+        top: 200px;
+        left: 200px;
         /* Adjusted to match the height of the navigation bar */
-        left: 0;
-        z-index: 999;
+        z-index: 0;
         /* Ensure it's below the navigation bar */
-        margin-top: 75px;
+        margin-top: -45px;
         /* Adjusted to match the height of the navigation bar */
         border-bottom-style: solid;
         border-radius: 0px;
         border-color: #f1f3ff;
         border-width: 1.5px;
-        padding: 4px;
-        z-index: 9999;
-    }
-    /*facebook, email,whatsapp links*/
-    
-    .active1 {
-        color: white;
-        background-color: #000000;
-        /* Change the background color */
-        color: whitesmoke;
-        /* Change the text color */
-        font-size: 1px;
+        padding-left: 75.5%;
+        padding-right: 0%;
     }
     
-    .active1:hover {
-        zoom: 130%;
-    }
-    /*facebook, email,whatsapp links*/
-    
-    .menu1 {
+    .services ul {
+        top: 110px;
+        font-size: 20px;
         color: rgb(0, 0, 0);
-        width: 1355px;
-        height: 75px;
-        background-color: transparent;
-        display: inline-flex;
-        justify-content: right;
-        align-items: center;
-        padding: 50px;
-        position: fixed;
-        top: 109px;
-        left: -100px;
-        right: 50px;
-        z-index: 1000;
-        /* Ensure the navigation bar is above other elements */
+        margin-left: -370px;
+        position: absolute;
         font-style: italic;
-        font-family: sans-serif;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     
-    .menu1 li a {
-        font-size: 13px;
-        color: whitesmoke;
-        text-decoration: wavy;
-        transition: 0.5s ease;
-        border-width: 1px;
+    .container p {
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        margin-left: -330px;
+        position: absolute;
+        top: 10px;
+        left: px;
+        font-weight: bolder;
+    }
+    
+    .picture {
+        max-height: 10px;
+        max-width: 10px;
+        position: absolute;
+        top: 35px;
+        left: 40px;
+        padding: 0px;
+        border-width: 8px;
+        border-color: black;
+    }
+    
+    button {
+        font-size: 18px;
+        position: absolute;
+        color: white;
+        background-color: rgb(105, 75, 30);
+        font-weight: bolder;
         border-style: solid;
+        border-width: 2px;
+        border-color: #ffcc5f;
         border-radius: 10px;
-        padding: 2px;
-        padding-right: 2px;
-        background-color: transparent;
-        font-family: sans-serif;
-        justify-content: space-between;
+        top: 500px;
+        left: 32px;
+    }
+    
+    button:hover {
+        background-color: rgb(182, 138, 50);
     }
 </style>
 
-
 <body>
-    <div class="second-menu">
-        <!-- Upper menu -->
-        <ul class="menu1">
 
-            <li><a href="index.html"><i class="active1"></i>ALL</a></li>
-            <li><a href="index.html"><i class="active1"></i>CHILANGA MULILO</a></li>
-            <li><a href="index.html"><i class="active1"></i>LOGO DESIGNS</a></li>
-            <li><a href="index.html"><i class="active1"></i>POSTERS</a></li>
-            <li><a href="index.html"><i class="active1"></i>BIRTHDAY CARDS </a></li>
-            <li><a href="index.html"><i class="active1"></i>FLYERS</a></li>
+    <div class="images">
 
-            </li>
-        </ul>
     </div>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>BRAVIN MEDIA</span>
+            </div>
+            <div class="menu">
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+        </div>
+        <div class="user">
+            <img src="BRAVINE MEDIA LOGO 1.png" alt="brave" class="user-img">
+            <div><br>
+                <p>M E N U</p><br>
+                <button type="button"><href="#"></href> ORDER NOW</button>
+            </div>
+            <ul>
+                <li>
+                    <a href="text.html">
+                        <i class="fa-solid fa-house "></i>
+                        <span class="nav-item ">H O M E</span></a>
 
+                </li><br>
 
+                <li>
+                    <a href="Photos.html">
+                        <i class="fa-regular fa-image "></i>
+                        <span class="nav-item ">P H O T OS</span></a>
 
+                </li><br>
 
-    <div class="empty-cover">
-        <!-- Upper menu -->
-        <ul class="menu">
+                <li>
+                    <a href="# ">
+                        <i class="fa-solid fa-video "></i>
+                        <span class="nav-item ">V I D E O S</span></a>
 
-            <li>
-                <a href="https://www.facebook.com/profile.php?id=100089871093990&mibextid=ZbWKwL" class="active">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:Bravinemedia@gmail.com" class="active">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </li>
-            <li>
-                <!-- Change href to open WhatsApp -->
-                <a href="whatsapp://send?phone=+260760700765" class="active">
-                    <i class="fa-brands fa-square-whatsapp"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
+                </li><br>
 
-    <nav>
-        <div class="logo">
-            <img src="BRAVINE MEDIA LOGO BLACK.png" alt="BRAVINE MEDIA LOGO"> </div>
-        <ul class="Menu">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-            <li><a href="Photos.html"><i class="fa-regular fa-image"></i>Photos </a></li>
-            <li><a href="videos.html"><i class="fa-solid fa-video"></i>Videos</a></li>
-            <li><a href="About.html"><i class="fa-solid fa-address-card"></i> About </a></li>
-        </ul>
-    </nav>
+                <li>
+                    <a href="# ">
+                        <i class="fa-solid fa-address-card "></i>
+                        <span class="nav-item ">A B O U T</span></a>
 
-
-
-    <div class="row">
-        <div class="column">
-            <img src="WE_TOO.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="SOMETHING_TASTE.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="thabo.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="BFLOW.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="KC47_ft_YOUNG_SKY_COVER....jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="Yummy foods 1.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="TWENDE.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="POIEMA CHRISTIAN ACADEMY.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="DECEMBER FLYER.,.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="Bsc Fellow Soft Loans_.jpg" alt="we_too" width="20%" />
-        </div>
-        <div class="column">
-            <img src="Ramah Worship Centre 1.jpg" alt="we_too" width="20%" />
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="empty-cover ">
+        <h1>CREATE MEMORIES WITH US
+        </h1>
+        <p> BRAVINE MEDIA</p>
 
-    <ul>
+    </div>
+
+    <ul class="links ">
         <li>
-
+            <a href="https://www.facebook.com/profile.php?id=100089871093990&mibextid=ZbWKwL " class="active ">
+                <i class="fa-brands fa-facebook "></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:Bravinemedia@gmail.com " class="active ">
+                <i class="fa-solid fa-envelope "></i>
+            </a>
+        </li>
+        <li>
+            <!-- Change href to open WhatsApp -->
+            <a href="whatsapp://send?phone=+260760700765 " class="active ">
+                <i class="fa-brands fa-square-whatsapp "></i>
+            </a>
         </li>
     </ul>
+
+    </div>
+    <div class="container ">
+
+    </div>
 
 
 </body>
